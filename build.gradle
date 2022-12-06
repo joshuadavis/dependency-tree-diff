@@ -1,7 +1,6 @@
-buildscript {
-	dependencies {
-		classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0'
-	}
+plugins {
+	id 'org.jetbrains.kotlin.jvm' version '1.4.0'
+	id 'idea'
 }
 
 apply plugin: 'org.jetbrains.kotlin.jvm'
@@ -87,11 +86,6 @@ artifacts {
 	archives file: binaryFile, name: 'binary', type: 'jar', builtBy: binaryJar, classifier: 'binary'
 }
 
-buildscript {
-	repositories {
-		mavenCentral()
-	}
-}
 repositories {
 	mavenCentral()
 	google()
